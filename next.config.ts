@@ -6,9 +6,9 @@ const nextConfig: NextConfig = {
   typescript: {
     tsconfigPath: isOnline ? './online/tsconfig.json' : 'tsconfig.json',
   },
+  output: isOnline ? 'standalone' : 'export',
   ...(!isOnline && {
-    basePath: '/PostCan',
-    output: 'export'
+    basePath: '/PostCan'
   })
 };
 

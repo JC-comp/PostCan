@@ -2,6 +2,7 @@ import { githubRepo } from "@/utils/constants";
 
 export default function Footer() {
     const commitHash = process.env.NEXT_PUBLIC_GIT_HASH;
+    const commitHashText = process.env.NEXT_PUBLIC_GIT_HASH_TEXT || commitHash;
 
     return (
         <footer className="w-full py-2 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
@@ -29,7 +30,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    {commitHash}
+                    {commitHashText}
                 </a>
             </div>
         </footer>
